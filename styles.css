@@ -14,50 +14,348 @@ header{
     position:relative;
     width:100%;
     height:300px;
-}
-
-footer{
-    display: block;
-    width:100%;
-    height:auto;
-    padding-top: 10px;
-    background-color: gainsboro;
-}
-small, footer p{
-    display: inline-block;
-    padding:10px;
+    background-color: beige;
 }
 header img{
     position:relative;
-    top:0;
+    top:-40px;
     left:0;
-    z-index:-1;
 }
 nav{
     position:absolute;
-    top:20px;
-    right:20px;
+    top:10px;
+    right:0px;
 }
 nav li{
     display: inline-block;
     list-style: none;
-
 }
 nav a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
-    color:black;
-    padding:5px;
+    color:white;
+    padding:10px 25px 15px 25px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    background-color: gray;
+}
+nav a:focus{
+    border: red;
+    border-radius: 7px;
+}
+nav a:hover{
+    background-color: aquamarine;
+    margin:5px;
+    border-radius: 5px;
 }
 h1{
     display: block;
     position:relative;
-    margin-left:200px;
+    margin-left:100px;
     top:175px;
     width:90%;
 }
+h2, p{
+    padding:15px;
+}
 header p{
     position: relative;
-    margin-left:200px;
+    margin-left:100px;
     top:75px;
     width:90%;
+}
+
+/*-------Majorca Section----*/
+
+.majorca{
+    width:100%;
+    margin:20px 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.majorca h2{
+    display: inline-block;
+    margin-left: 100px;
+    padding-right: 10px;
+    grid-column: 1/2;
+    grid-row: 1;
+    
+}
+.majorca p{
+    grid-column: 1/2;
+    margin-left: 100px;
+    padding-right: 10px;
+}
+.majorca-images{
+    grid-column: 2;
+    
+}
+
+/*-------Plan your Trip----*/
+.plan-your-trip{
+    display: flex;
+    width:100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: beige;
+    padding:30px 0;
+    
+}
+.trip-wrapper h2{
+    background-color: beige;
+    padding-top:20px;
+    padding-left: 100px;
+}
+.trip-wrapper h3{
+    background-color: white;
+    padding:7px 0 7px 5px;
+}
+.get-there{
+    background-color: #e9ecef;
+    width:350px;
+    padding:10px;
+}
+.places-to-stay{
+    background-color: #ced4da;
+    width:350px;
+    padding:10px;
+}
+.things-to-do{
+    background-color: #adb5bd;
+    width:350px;
+    padding:10px;
+}
+.where-to-eat{
+    background-color: #6c757d;
+    width:350px;
+    padding:10px;
+}
+
+/*---Article---*/
+.testimonial-grid-wrapper{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    width:100%;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 30px;
+}
+.testimonial-grid-wrapper>h2{
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-left:100px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding:20px 0;
+}
+.testimonial-grid-wrapper img{
+    position: relative;
+    top:-50px;
+    z-index: 99;
+}
+.testimonial-grid-wrapper h3{
+    padding:15px 0;
+    position: relative;
+    top:225px;
+    z-index: 100;
+}
+
+/*----About Destination----*/
+.about-wrapper{
+    width:100%;
+    background-color: beige;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.about-wrapper>h2{
+    text-align: left;
+    padding:30px 0;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+.about-grid-wrap{
+    width:50%;
+    margin-left: 360px;
+    display: grid;  
+    position: relative;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+}
+.about-grid-wrap p, .about-grid-wrap h3{
+    background-color: white;
+    padding:10px;
+}
+.about-grid-wrap p{
+    height:100px;
+}
+.about-size>h3{
+    position: relative;
+    top:100px;
+    z-index: 99;
+    margin-bottom: 10px;
+}
+.about-size svg{
+    position: relative;
+    top:-60px;
+    z-index: 100;
+}
+.about-elevation>h3{
+    position: relative;
+    top:100px;
+    z-index: 99;
+    margin-bottom: 10px;
+}
+.about-elevation svg{
+    position: relative;
+    top:-60px;
+    z-index: 100;
+}
+.about-location>h3{
+    position: relative;
+    top:100px;
+    z-index: 99;
+    margin-bottom: 10px;
+}
+.about-location svg{
+    position: relative;
+    top:-60px;
+    z-index: 100;
+}
+.about-population>h3{
+    position: relative;
+    top:100px;
+    z-index: 99;
+    margin-bottom: 10px;
+}
+.about-population svg{
+    position: relative;
+    top:-60px;
+    z-index: 100;
+}
+
+/*-----Form--------*/
+form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+    width: 75%;
+    padding:1em;
+    margin: 0 auto;
+    gap:10px;
+}
+br{
+    content:"";
+    width:1px;
+    height:1px;
+    grid-row: 12;
+}
+form>h2{
+    grid-column: 1/4;
+    padding: 20px 0;
+    margin-left: 100px;
+}
+label[for="fname"], #fname{
+    grid-column: 1/2;
+}
+label[for="lname"], #lname{
+    grid-column: 1/2;
+}
+fieldset{
+    grid-column: 2;
+    grid-row: 2/4;
+    border:none;
+}
+label[for="email-address"], #email-address{
+    grid-column: 2/3;
+}
+/*--label[for="email-address"]{
+    grid-row: 3/4;
+}
+#email-address{
+    grid-row: 4/5;
+}*/
+label[for="phone-number"], #phone-number{
+    grid-column: 2/3;
+}
+label[for="destination"], #destination{
+    grid-column: 3/4;
+}
+label[for="destination"]{
+    grid-row: 2/3;
+}
+#destination{
+    grid-row: 3/4;
+}
+label[for="travel-time"], #travel-time{
+    grid-column: 3/4;
+}
+label[for="travel-time"]{
+    grid-row: 4/5;
+}
+#travel-time{
+    grid-row: 5/6;
+}
+.required{
+    color:red;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+}
+input, label, fieldset{
+    display:inline-block;
+    padding:10px;
+}
+#submitbtn{
+    background-color: aquamarine;
+    width:100px;
+    margin: 10px;
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
+select{
+    background-color: gainsboro;
+    height:30px;
+}
+/*-----Footer------*/
+footer{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    height:auto;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: beige;
+}
+footer>small{
+    margin-right: auto;
+    padding:10px;
+    font-size: .5em;
+}
+footer p{
+    margin-left: 1rem;
+    font-size: .75em;
+}
+
+/*-----Media Queries------*/
+@media (max-width:1300px) {
+    
+}
+
+
+@media (max-width:950px) {
+    
+}
+
+
+@media (max-width:450px){
+
 }
