@@ -1,3 +1,4 @@
+/*---
 *{
     box-sizing: border-box;
     margin:0;
@@ -79,12 +80,12 @@ header p{
 }
 
 /*-------Majorca Section----*/
-
+/*
 .majorca{
     width:100%;
     margin:20px 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 .majorca h2{
     display: inline-block;
@@ -101,11 +102,17 @@ header p{
 }
 .majorca-images{
     grid-column: 2;
-    max-width: 100%;
-    max-height:fit-content;
+    width: 100%;
+    height: auto;
+    padding-right:5px;
 }
-
+.majorca-images>img{
+    width:75%;
+    height: auto;
+}
+*/
 /*-------Plan your Trip----*/
+/*
 .plan-your-trip{
     display: flex;
     width:100%;
@@ -146,6 +153,7 @@ header p{
 }
 
 /*---Article---*/
+/*
 .testimonial-grid-wrapper{
     display: grid;
     position: relative;
@@ -177,6 +185,7 @@ header p{
 }
 
 /*----About Destination----*/
+/*
 .about-wrapper{
     width:100%;
     background-color: beige;
@@ -254,6 +263,7 @@ header p{
 }
 
 /*-----Form--------*/
+/*
 form{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -294,6 +304,7 @@ label[for="email-address"], #email-address{
 #email-address{
     grid-row: 4/5;
 }*/
+/*
 label[for="phone-number"], #phone-number{
     grid-column: 2/3;
 }
@@ -337,6 +348,7 @@ select{
     height:30px;
 }
 /*-----Footer------*/
+/*
 footer{
     display: flex;
     position: relative;
@@ -360,6 +372,7 @@ footer p{
 }
 
 /*-----Media Queries------*/
+/*
 @media (max-width:1300px) {
     .majorca{
         display: flex;
@@ -410,8 +423,8 @@ footer p{
         padding: 10px 0 10px 100px;
     }
 }
-
-
+---*/
+/*
 @media (max-width:860px) {
     .majorca{
         display: flex;
@@ -469,5 +482,5 @@ footer p{
         margin-left:5px;
     }
 }
-
+---*/
 
