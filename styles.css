@@ -35,14 +35,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -100,8 +92,11 @@ header h2{
     display:none;
 }
 header{
+    margin:0 auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
     grid-template-rows:1fr 1fr;
     grid-auto-rows: auto;
     gap:0.5rem;
@@ -109,24 +104,72 @@ header{
     max-width:1200px;
     background:var(--teal);
 }
-#logo{
-    width:100%;
-    max-width:100px;
+header h1{
+    font-size: 2.5rem;
 }
+header p{
+    width:80%;
+}
+#logo img{
+    margin: 0;
+    max-width:125px;
+    max-height: 125px;
+}
+
+/*--------Navigation--------*/
 #toggle{
     display:none;
 }
-#menu-toggle{
-    display:inline-block;
+nav{
+    display: inline-block;
+    position:absolute;
+    top:20px;
+    right:0px;
 }
+#menu-toggle label{
+    background-color: var(--yellow);
+    padding:15px 55px;
+    text-align: center;
+}
+#menu-toggle label:hover{
+    cursor: pointer;
+    background-color: var(--dark-gray);
+    color:var(--white);
+}
+nav ul {
+    display: none;
+    position: absolute;
+    width:200px;
+    height:auto;
+    z-index: 1;
+    text-align: center;
+    background-color: var(--teal);
+}
+nav li{
+    border:0.5px solid var(--black);
+}
+nav:hover ul {
+    display: block;
+}
+ul a{
+    color: var(--dark-gray);
+    width: fit-content;
+    text-decoration: none;
+    margin: 0 auto;
+    font-weight: bold;
+}
+ul a:hover{
+    color:var(--yellow);
+    background-color: var(--black);
+}
+/*-----------------Main styles---------------*/
 main{
     max-width: 1300px;
     margin:0;
-    
 }
 /*----------Intro-------------*/
 #intro{
-    max-width:600px;
+    width:100%;
     display:block;
     margin: 20px 0;
     
@@ -136,7 +179,7 @@ main{
 }
 #intro p{
     line-height: 2rem;
-    width:90%;
+    width:80%;
     padding-left:20px;
 }
 #img-grid{
@@ -149,7 +192,7 @@ main{
 #intro img{
     display: block;
     margin:0 auto;
-    width:100%;
+    max-width:100%;
     max-height: 100%;
     
 }
@@ -166,6 +209,9 @@ main{
     padding-top:15px;
     padding-left: 20px;
 }
+#plan h4{
+    padding-top:10px;
+}
 #plan div{
     display: grid;
     grid-template-columns: 1fr;
@@ -174,16 +220,23 @@ main{
     justify-items: center;
 }
 #plan img{
-    max-width:100px;
-    max-height:100px;
+    max-width:150px;
+    max-height:150px;
 }
-
+#plan section{
+    width:250px;
+    height:200px;
+    background-color: var(--teal);
+    border:2px solid var(--white);
+    border-radius: 5px;
+    text-align: center;
+}
 /*-----------Testimonials------*/
 #testimonials{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 20px;
 }
 #testimonials div{
@@ -196,7 +249,7 @@ main{
     justify-items: center;
 }
 #testimonials section{
-    max-width:fit-content;
+    width:80%;
     text-align: center;
     padding:5px 0;
 }
@@ -209,19 +262,18 @@ main{
     text-transform: uppercase;
 }
 q{
+    display: inline-block;
     font-style: italic;
 }
 
 /*------------About--------------*/
 #about{
+    width:100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap:0.5rem;
-    width:100%;
+    gap:1rem;
     background-color: var(--blue);
-    padding-top: 10px;
-    padding-bottom: 20px;
 }
 #about div{
     display: grid;
@@ -236,6 +288,9 @@ q{
 #about h3{
     padding-bottom:15px;
     padding-left:20px;
+}
+#about h4{
+    font-weight: bold;
 }
 #about img{
     max-width: 100px;
