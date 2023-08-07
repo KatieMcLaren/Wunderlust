@@ -139,22 +139,24 @@ nav{
 }
 nav ul {
     display: none;
-    position: absolute;
+}
+nav li{
+    border:0.5px solid var(--black);
     width:200px;
+    background-color: var(--blue);
+}
+nav:hover ul {
+    display: block;
+    position: absolute;
+    width:100%;
     height:auto;
+    right:20px;
     z-index: 1;
     text-align: center;
     background-color: var(--teal);
 }
-nav li{
-    border:0.5px solid var(--black);
-}
-nav:hover ul {
-    display: block;
-}
 ul a{
     color: var(--dark-gray);
-    width: fit-content;
     text-decoration: none;
     margin: 0 auto;
     font-weight: bold;
@@ -319,7 +321,7 @@ q{
     font-family: var(--font-family);
     font-size: 1rem;
 }
-label{
+#contact label{
     display: block;
     width:80%;
     max-width: 400px;
