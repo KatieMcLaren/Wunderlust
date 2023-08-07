@@ -51,6 +51,7 @@ table {
     --light-gray:#EAEAEA;
     --white:#FFFFFF;
     --black:#000000;
+    --font-family:'Montserrat', sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -93,6 +94,7 @@ header h2{
 }
 header{
     margin:0 auto;
+    width:100%;
     padding-bottom: 20px;
     padding-left: 20px;
     display:grid;
@@ -101,7 +103,6 @@ header{
     grid-auto-rows: auto;
     gap:0.5rem;
     align-items: center;
-    max-width:1200px;
     background:var(--teal);
 }
 header h1{
@@ -164,7 +165,7 @@ ul a:hover{
 }
 /*-----------------Main styles---------------*/
 main{
-    max-width: 1300px;
+    width:100%;
     margin:0;
 }
 /*----------Intro-------------*/
@@ -300,9 +301,73 @@ q{
 /*----------Contact us----------*/
 #contact{
     display:block;
-    width:500px;
-    padding:1rem;
-    margin:0 auto;
+    width:80%;
+    padding:20px 0;
+    margin-left:30px;
+}
+#contact h3{
+    display: block;
+}
+#names label, legend, #selects label, label[for="email"], label[for="phone"]{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.required{
+    color:var(--purple);
+}
+.form-required{
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+label{
+    display: block;
+    width:80%;
+    max-width: 400px;
+    padding:10px 0;
+    border-radius: 0;
+}
+form input{
+    display: inline-block;
+    width:80%;
+    max-width: 400px;
+    height:50px;
+    border-radius: 0;
+    border: 2px solid var(--purple);
+}
+input[type="submit"]{
+    display: block;
+    width:80%;
+    max-width: 400px;
+    height:50px;
+    margin-top: 15px;
+    border-radius: 0;
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+fieldset{
+    margin-top: 10px;
+    padding:10px;
+}
+fieldset input{
+    display: inline-block;
+    margin-right:30px;
+    width:50px;
+    accent-color: var(--purple);
+    border: 2px solid var(--purple);
+}
+.custom-select select{
+    width:80%;
+    max-width: 400px;
+    height:50px;
+    border-radius: 0;
+    border: 2px solid var(--purple);
+}
+input::placeholder{
+    padding-left: 10px;
 }
 
 
