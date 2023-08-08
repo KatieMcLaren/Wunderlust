@@ -121,11 +121,19 @@ header p{
 #toggle{
     display:none;
 }
+.active{
+    background-color: var(--yellow);
+    color:var(--black);
+}
+nav ul{
+    display: none;
+}
 nav{
     display: inline-block;
     position:absolute;
     top:20px;
     right:0px;
+    transition:all 0.3s ease-in-out;
 }
 #menu-toggle label{
     background-color: var(--yellow);
@@ -137,22 +145,10 @@ nav{
     background-color: var(--dark-gray);
     color:var(--white);
 }
-nav ul {
-    display: none;
-}
 nav li{
     border:0.5px solid var(--black);
-    width:200px;
+    width:100px;
     background-color: var(--teal);
-}
-nav:hover ul {
-    display: block;
-    position: absolute;
-    width:100%;
-    height:auto;
-    right:20px;
-    z-index: 1;
-    text-align: center;
 }
 ul a{
     color: var(--dark-gray);
@@ -173,8 +169,7 @@ main{
 #intro{
     width:100%;
     display:block;
-    margin: 20px 0;
-    
+    margin: 20px 0;  
 }
 #intro h2{
     padding-left:20px;
@@ -371,12 +366,6 @@ fieldset input{
 input::placeholder{
     padding-left: 10px;
 }
-
-
-
-
-
-
 /*----------Footer-------------*/
 footer{
     width:100%;
@@ -402,14 +391,18 @@ footer a{
     header{
         grid-template-columns: 150px 2fr;
         grid-template-rows: 1fr 1fr 1fr;
+        align-content: center;
     }
     nav{
-        width:100%;
-        position: static;
+        width: 100%;
+        display: block;
+        position: relative;
         text-align: center;
     }
+    nav li{
+        width:175px;
+    }
     nav ul {
-        width:100%;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: 1fr;
@@ -421,12 +414,7 @@ footer a{
     }
     ul a{
         display: inline-block;
-        background-color: var(--white);
         padding:10px;
-    }
-    ul a:hover{
-        color:black;
-        background-color: var(--yellow);
     }
     #menu-toggle label{
         display: none;
@@ -486,33 +474,34 @@ footer a{
 
 @media  screen and (min-width:1000px){
     header{
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 100px 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    header p{
-        grid-column: 2/-1;
-    }
     nav{
-        position:relative;
-        top:0;
-        right:0;
-        width:50%;
+        grid-column: 3/4;
+        grid-row: 1;
+        overflow: visible;
     }
     #intro{
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 500px 1fr;
+        grid-template-rows: auto;
+    }
+    #intro h2{
+        display: inline-block;
+        width:50%;
+    }
+    #intro p{
+        width:60%;
     }
     #img-grid{
-        grid-column: 2/-1;
-        grid-row: 1;
+        grid-column: 2/4;
+        grid-row: 1/3;
+        width:90%;
     }
     #img-grid img{
         max-width:100%;
         max-height: 100%;
-    }
-    #img-grid picture{
-        grid-column: 1/-1;
     }
     #plan h3{
         grid-column: 1/3;
