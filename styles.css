@@ -40,7 +40,7 @@ table {
 	border-spacing: 0;
 }
 /*-------------------------End Reset-------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');*/
 
 :root{
     --yellow:#F6D64A;
@@ -58,6 +58,27 @@ table {
     margin:0;
     padding:0;
 }
+@font-face{
+    font-family : 'Molle';
+    font-style : italic;
+    font-weight : 400;
+    font-display : swap;
+    src : url(https://fonts.gstatic.com/s/molle/v21/E21n_dL5hOXFhWEsXzg.ttf) format('truetype');
+}
+@font-face{
+    font-family : 'Montserrat';
+    font-style : normal;
+    font-weight : 400;
+    font-display : swap;
+    src : url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face{
+    font-family : 'Montserrat';
+    font-style : normal;
+    font-weight : 600;
+    font-display : swap;
+    src : url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');
+}
 body{
     margin:0 auto;
     line-height: 1.5;
@@ -74,14 +95,14 @@ h4, p, q, small, nav, button, form{
     position:absolute;
     width:1px;
     height:1px;
-    left:-10000;
+    left:-1000;
     overflow: hidden;
 }
 #skip{
     position:absolute;
     width:1px;
     height:1px;
-    left:-10000;
+    left:-1000;
     overflow: hidden;
 }
 #skip:focus{
@@ -237,7 +258,6 @@ main{
     margin-bottom: 20px;
 }
 #testimonials div{
-    max-width: calc(100%-1.5rem);
     margin-top:15px;
     display: grid;
     grid-template-columns: 1fr;
